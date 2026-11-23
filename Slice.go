@@ -32,7 +32,7 @@ func main() {
 		input, err := reader.ReadString('\n')
 		input = strings.TrimSpace(input)
 
-		if strings.EqualFold(input, "X") {
+		if input == "X" || input == "x" {
 			break
 		}
 
@@ -47,7 +47,7 @@ func main() {
 			}
 		}
 
-		if err != nil { // End of input (for example, Ctrl+Z on Windows).
+		if err != nil { // End of input (for example, Ctrl+Z on Windows)and cmd +z on the mac book
 			break
 		}
 	}
